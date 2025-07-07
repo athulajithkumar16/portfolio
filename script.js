@@ -1,3 +1,43 @@
+// Custom Cursor
+const cursor = document.querySelector('.custom-cursor');
+
+// Update cursor position
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+});
+
+// Add hover effect for interactive elements
+const interactiveElements = document.querySelectorAll('a, button, input, textarea, select, .btn, .nav-link, .social-link, .project-card, .skill-item');
+
+interactiveElements.forEach(element => {
+    element.addEventListener('mouseenter', () => {
+        cursor.classList.add('hover');
+    });
+    
+    element.addEventListener('mouseleave', () => {
+        cursor.classList.remove('hover');
+    });
+});
+
+// Add click effect
+document.addEventListener('mousedown', () => {
+    cursor.classList.add('click');
+});
+
+document.addEventListener('mouseup', () => {
+    cursor.classList.remove('click');
+});
+
+// Hide cursor when leaving window
+document.addEventListener('mouseleave', () => {
+    cursor.style.opacity = '0';
+});
+
+document.addEventListener('mouseenter', () => {
+    cursor.style.opacity = '1';
+});
+
 // Mobile Navigation Toggle
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
