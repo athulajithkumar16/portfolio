@@ -1,24 +1,56 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Download, Mail, Github, Linkedin } from "lucide-react"
+import { useEffect, useState } from "react"
 
 export function HeroSection() {
+  const [scrollY, setScrollY] = useState(0)
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY)
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  const handleDownloadResume = () => {
+    const link = document.createElement('a')
+    link.href = '/Athul K A Resume.pdf'
+    link.download = 'Athul K A Resume.pdf'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
+  const titleText = "Hi, I'm Athul K A"
+  const words = titleText.split(" ")
+
+  const getWordOpacity = (index: number) => {
+    const scrollProgress = Math.max(0, scrollY) / 300
+    const wordProgress = scrollProgress * words.length - index
+    return Math.min(1, Math.max(0.2, wordProgress))
+  }
+
   return (
     <section id="home" className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 bg-black">
       <div className="max-w-7xl mx-auto">
         <div className="text-center">
           <div className="mb-8">
-            <Badge
-              variant="secondary"
-              className="mb-4 backdrop-blur-md bg-cyan-400/10 text-cyan-300 border border-cyan-400/30"
-            >
-              Data Science Professional
-            </Badge>
             <h1 className="text-4xl sm:text-6xl font-bold text-white mb-6">
-              Hi, I'm{" "}
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Athul K A
-              </span>
+              {words.map((word, index) => (
+                <span
+                  key={index}
+                  className="transition-all duration-300"
+                  style={{
+                    color: word.includes("Athul") 
+                      ? `rgba(34, 211, 238, ${getWordOpacity(index)})` 
+                      : `rgba(255, 255, 255, ${getWordOpacity(index)})`,
+                  }}
+                >
+                  {word}{" "}
+                </span>
+              ))}
             </h1>
             <p className="text-xl text-white/70 max-w-3xl mx-auto mb-8">
               Computer Science graduate skilled in Python, SQL, and Power BI. Experienced in data analysis, forecasting,
@@ -38,6 +70,7 @@ export function HeroSection() {
               variant="outline"
               size="lg"
               className="glass-effect border-blue-400/30 hover:bg-blue-500/20 text-blue-300 bg-transparent"
+              onClick={handleDownloadResume}
             >
               <Download className="mr-2 h-4 w-4" />
               Download Resume
@@ -47,7 +80,7 @@ export function HeroSection() {
           <div className="flex justify-center space-x-6">
             <a
               href="mailto:athulajithkumar16@gmail.com"
-              className="text-white/60 hover:text-cyan-400 transition-colors p-2 backdrop-blur-md bg-white/5 border border-white/10 rounded-full"
+              className="text-white/60 hover:text-cyan-400 transition-colors p-2"
             >
               <Mail className="h-6 w-6" />
             </a>
@@ -55,7 +88,7 @@ export function HeroSection() {
               href="https://linkedin.com/in/athulka16"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/60 hover:text-cyan-400 transition-colors p-2 backdrop-blur-md bg-white/5 border border-white/10 rounded-full"
+              className="text-white/60 hover:text-cyan-400 transition-colors p-2"
             >
               <Linkedin className="h-6 w-6" />
             </a>
@@ -63,7 +96,7 @@ export function HeroSection() {
               href="https://github.com/athulajithkumar16"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/60 hover:text-cyan-400 transition-colors p-2 backdrop-blur-md bg-white/5 border border-white/10 rounded-full"
+              className="text-white/60 hover:text-cyan-400 transition-colors p-2"
             >
               <Github className="h-6 w-6" />
             </a>
