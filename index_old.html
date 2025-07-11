@@ -3,26 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Athul K A - Data Science Portfolio</title>
-    <meta name="description" content="Computer Science graduate skilled in Python, SQL, and Power BI">
-    <link rel="stylesheet" href="styles_new.css">
+    <title>Athul K A - Data Analyst Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="bg-black text-white">
+<body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <span class="text-cyan-400">AK</span>
+                <span>Athul K A</span>
             </div>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -34,46 +31,50 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="container">
+    <section id="home" class="hero">
+        <div class="hero-container">
             <div class="hero-content">
-                <div class="badge">
-                    Data Science Professional
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Data Analyst</span>
+                        <br>Turning Data into Insights
+                    </h1>
+                    <p class="hero-subtitle">
+                        I transform complex data into actionable insights that drive business decisions. 
+                        Passionate about analytics, visualization, and storytelling through data.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="Athul K A Resume.pdf" class="btn btn-secondary" target="_blank">Download Resume</a>
+                    </div>
                 </div>
-                <h1 class="hero-title">
-                    Hi, I'm <span class="gradient-text">Athul K A</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Computer Science graduate skilled in Python, SQL, and Power BI. Experienced in data analysis, forecasting,
-                    and dashboarding. Passionate about transforming data into actionable insights for business growth.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">
-                        <i class="fas fa-envelope"></i>
-                        Get In Touch
-                    </a>
-                    <a href="Athul K A Resume.pdf" class="btn btn-secondary" target="_blank">
-                        <i class="fas fa-download"></i>
-                        Download Resume
-                    </a>
-                </div>
-                <div class="social-links">
-                    <a href="mailto:athulajithkumar16@gmail.com" class="social-link">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/athulka16" target="_blank" class="social-link">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/athulajithkumar16" target="_blank" class="social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
+                <div class="hero-visual">
+                    <div class="data-visualization">
+                        <div class="chart-container">
+                            <div class="bar-chart">
+                                <div class="bar" style="height: 60%"></div>
+                                <div class="bar" style="height: 80%"></div>
+                                <div class="bar" style="height: 45%"></div>
+                                <div class="bar" style="height: 90%"></div>
+                                <div class="bar" style="height: 70%"></div>
+                            </div>
+                            <div class="pie-chart">
+                                <div class="pie-segment" style="--angle: 120deg"></div>
+                                <div class="pie-segment" style="--angle: 90deg"></div>
+                                <div class="pie-segment" style="--angle: 150deg"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about-section">
+    <section id="about" class="about">
         <div class="container">
             <div class="section-header">
                 <h2>About Me</h2>
@@ -93,17 +94,17 @@
                     </p>
                     <div class="stats">
                         <div class="stat">
-                            <span class="stat-number">100+</span>
+                            <span class="stat-number">6+</span>
                             <span class="stat-label">Projects Completed</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">5+</span>
+                            <span class="stat-number">2+</span>
                             <span class="stat-label">Years Experience</span>
                         </div>
-                        <div class="stat">
-                            <span class="stat-number">50+</span>
+                        <!-- <div class="stat">
+                            <span class="stat-number">+</span>
                             <span class="stat-label">Happy Clients</span>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="about-image">
@@ -115,8 +116,88 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>Showcasing my analytical expertise through real-world projects</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-visual">
+                            <div class="data-points">
+                                <div class="point"></div>
+                                <div class="point"></div>
+                                <div class="point"></div>
+                                <div class="point"></div>
+                                <div class="point"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Sales Performance Analysis</h3>
+                        <p>Comprehensive analysis of sales data to identify trends, patterns, and opportunities for revenue growth.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Tableau</span>
+                            <span>SQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-visual">
+                            <div class="dashboard-mockup">
+                                <div class="dashboard-header"></div>
+                                <div class="dashboard-content">
+                                    <div class="widget"></div>
+                                    <div class="widget"></div>
+                                    <div class="widget"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Customer Behavior Dashboard</h3>
+                        <p>Interactive dashboard tracking customer engagement metrics and behavioral patterns for marketing optimization.</p>
+                        <div class="project-tags">
+                            <span>Power BI</span>
+                            <span>R</span>
+                            <span>Excel</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-visual">
+                            <div class="prediction-model">
+                                <div class="model-visual">
+                                    <div class="line-chart">
+                                        <div class="line"></div>
+                                        <div class="prediction-line"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Predictive Analytics Model</h3>
+                        <p>Machine learning model for forecasting customer churn and identifying at-risk customers for retention strategies.</p>
+                        <div class="project-tags">
+                            <span>Machine Learning</span>
+                            <span>Python</span>
+                            <span>Scikit-learn</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
-    <section id="skills" class="skills-section">
+    <section id="skills" class="skills">
         <div class="container">
             <div class="section-header">
                 <h2>Technical Skills</h2>
@@ -196,140 +277,8 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Experience</h2>
-                <p>My professional journey in data science</p>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Data Analyst</h3>
-                        <h4>Company Name</h4>
-                        <p class="timeline-date">2022 - Present</p>
-                        <p>Led data analysis projects, created interactive dashboards, and provided actionable insights for business decisions.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Junior Data Analyst</h3>
-                        <h4>Previous Company</h4>
-                        <p class="timeline-date">2020 - 2022</p>
-                        <p>Assisted in data collection, cleaning, and preliminary analysis for various business units.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Featured Projects</h2>
-                <p>Showcasing my analytical expertise through real-world projects</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-visual">
-                            <div class="data-points">
-                                <div class="point"></div>
-                                <div class="point"></div>
-                                <div class="point"></div>
-                                <div class="point"></div>
-                                <div class="point"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Sales Performance Analysis</h3>
-                        <p>Comprehensive analysis of sales data to identify trends, patterns, and opportunities for revenue growth.</p>
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>Tableau</span>
-                            <span>SQL</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-visual">
-                            <div class="dashboard-mockup">
-                                <div class="dashboard-header"></div>
-                                <div class="dashboard-content">
-                                    <div class="widget"></div>
-                                    <div class="widget"></div>
-                                    <div class="widget"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Customer Behavior Dashboard</h3>
-                        <p>Interactive dashboard tracking customer engagement metrics and behavioral patterns for marketing optimization.</p>
-                        <div class="project-tags">
-                            <span>Power BI</span>
-                            <span>R</span>
-                            <span>Excel</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-visual">
-                            <div class="prediction-model">
-                                <div class="model-visual">
-                                    <div class="line-chart">
-                                        <div class="line"></div>
-                                        <div class="prediction-line"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Predictive Analytics Model</h3>
-                        <p>Machine learning model for forecasting customer churn and identifying at-risk customers for retention strategies.</p>
-                        <div class="project-tags">
-                            <span>Machine Learning</span>
-                            <span>Python</span>
-                            <span>Scikit-learn</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="education-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Education</h2>
-                <p>My academic background and certifications</p>
-            </div>
-            <div class="education-grid">
-                <div class="education-card">
-                    <h3>Bachelor of Computer Science</h3>
-                    <h4>University Name</h4>
-                    <p class="education-date">2016 - 2020</p>
-                    <p>Graduated with honors in Computer Science with focus on data structures, algorithms, and software engineering.</p>
-                </div>
-                <div class="education-card">
-                    <h3>Data Science Certification</h3>
-                    <h4>Online Platform</h4>
-                    <p class="education-date">2021</p>
-                    <p>Comprehensive certification covering Python, SQL, machine learning, and data visualization techniques.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Section -->
-    <section id="contact" class="contact-section">
+    <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
                 <h2>Get In Touch</h2>
@@ -385,20 +334,18 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-text">
-                    <p>&copy; 2024 Athul K A. All rights reserved.</p>
+                    <p>&copy; 2025 Athul K A. All rights reserved.</p>
                 </div>
                 <div class="footer-social">
-                    <a href="https://linkedin.com/in/athulka16" class="social-link" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/athulajithkumar16" class="social-link" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
+                    <a href="https://www.linkedin.com/in/athulka16/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/athulajithkumar16" class="social-link"><i class="fab fa-github"></i></a>
+                    <!-- <a href="#" class="social-link"><i class="fab fa-twitter"></i></a> -->
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="script_new.js"></script>
+    <div class="custom-cursor"></div>
+    <script src="script.js"></script>
 </body>
 </html> 
